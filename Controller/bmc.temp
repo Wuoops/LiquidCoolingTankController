@@ -1,0 +1,71 @@
+spawn ssh admin@192.168.11.3 ipmitool -H 192.168.11.3 -U admin -P admin sdr
+admin@192.168.11.3's password: 
+FAN1_RPM         | 0 RPM             | cr
+FAN2_RPM         | 0 RPM             | cr
+FAN3_RPM         | 0 RPM             | cr
+FAN4_RPM         | 0 RPM             | cr
+FAN5_RPM         | 0 RPM             | cr
+FAN6_RPM         | 0 RPM             | cr
+FAN7_RPM         | 0 RPM             | cr
+FAN8_RPM         | 0 RPM             | cr
+Inlet_Temp       | no reading        | ns
+Outlet_Temp      | 14 degrees C      | ok
+CPU0_Temp        | 14 degrees C      | ok
+CPU0_Margin_Temp | 77 degrees C      | ok
+CPU1_Temp        | 15 degrees C      | ok
+CPU1_Margin_Temp | 76 degrees C      | ok
+CPU0_Status      | 0x80              | ok
+CPU1_Status      | 0x80              | ok
+CPU0_PROC_Hot    | 0x00              | ok
+CPU1_PROC_Hot    | 0x00              | ok
+DIMMG0_Temp      | 16 degrees C      | ok
+DIMMG1_Temp      | no reading        | ns
+CPU0_VR_Temp     | 15 degrees C      | ok
+CPU1_VR_Temp     | 16 degrees C      | ok
+PCH_Temp         | 18 degrees C      | ok
+MAX_NVME_Temp    | no reading        | ns
+OCP1Zone_Temp    | 15 degrees C      | ok
+OCP2Zone_Temp    | 16 degrees C      | ok
+SYS_12V          | 12.03 Volts       | ok
+SYS_5V           | 4.99 Volts        | ok
+SYS_3.3V         | 3.33 Volts        | ok
+OEM_RTC_Battery  | 2.79 Volts        | ok
+CPU0_VCORE       | 1.78 Volts        | ok
+CPU1_VCORE       | 1.79 Volts        | ok
+CPU0_ABCDDR_VDD  | 1.21 Volts        | ok
+CPU0_DEFDDR_VDD  | 1.22 Volts        | ok
+CPU1_ABCDDR_VDD  | 1.21 Volts        | ok
+CPU1_DEFDDR_VDD  | 1.22 Volts        | ok
+Power_drop       | Not Readable      | ns
+Power_timeout    | Not Readable      | ns
+PS1_Status       | 0x01              | ok
+PS2_Status       | 0x01              | ok
+Total_Power      | 80 Watts          | ok
+PS1_Power        | 40 Watts          | ok
+PS2_Power        | 40 Watts          | ok
+OEM_PS1_Temp     | 13 degrees C      | ok
+OEM_PS2_Temp     | 13 degrees C      | ok
+OEM_PS1_In_Vol   | 224 Volts         | ok
+OEM_PS2_In_Vol   | 226 Volts         | ok
+BMC_Boot_Up      | 0x02              | ok
+BIOS_Boot_Up     | 0x00              | ok
+BIOS_POST_Status | 0x00              | ok
+Button_Pressed   | 0x00              | ok
+Chassis_Control  | 0x00              | ok
+ACPI_PWR_Status  | 0x01              | ok
+IPMI_Watchdog    | 0x00              | ok
+OEM_PEF_Action   | 0 unspecified     | ok
+SEL_Status       | 0 unspecified     | ok
+Memory_Status    | 0 unspecified     | ok
+Memory_PPR       | 0x00              | ok
+Memory_ADC_SR    | 0x00              | ok
+OEM_GPU1_Temp    | no reading        | ns
+OEM_GPU2_Temp    | no reading        | ns
+OEM_FPGA1_Temp   | no reading        | ns
+OEM_FPGA2_Temp   | no reading        | ns
+OEM_FPGA1_Power  | no reading        | ns
+OEM_FPGA2_Power  | no reading        | ns
+MOC1_CPU_Temp    | no reading        | ns
+MOC1_FPGA_Temp   | no reading        | ns
+MOC1_DIMM_Temp   | no reading        | ns
+MOC1_NVME_Temp   | no reading        | ns

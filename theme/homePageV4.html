@@ -1,0 +1,141 @@
+<!DOCTYPE html >
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Inventec Liquid Cooling</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrapV4.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/localStyle.css' %}">
+
+</head>
+<body style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;padding:0;margin: 0;">
+  <!-- header -->
+<!-- Image and text -->
+<nav class="navbar navbar-dark bg-dark">
+    <img src="{% static 'img/inventec.png' %}" style=" width: 120px;padding:8px">
+<!--    <img src="{% static 'img/INVENTEC.png' %}" style=" width: 95px;padding:0px">-->
+</nav >
+  <div class="container-fluid" style="height:100%;">
+  <div class="row"style="height:100%;">
+          <div class="col-xs-1" style="height:100% ">
+                <div class="bg-light nav-primary visible-lg nav-vertical flex-column"style="height:100%;width:130px" >
+                    <a style="padding:30px" class="nav-link nav-item text-dark  h text-center" href="/homepage/"><i class="fa fa-dashboard fa-2x"></i><div>Summary</div></a>
+                    <a style="padding:30px" class="nav-link nav-item text-black-50 h text-center" href="/cdu/"><i class="fa fa-th fa-2x"></i><div>CDU</div></a>
+                    <a style="padding:30px" class="nav-link nav-item text-black-50 h text-center" href="/sensor/"><i class="fa fa-thermometer-half fa-2x"></i><div>Sensor</div></a>
+                    <a style="padding:30px" class="nav-link nav-item text-black-50 h text-center" href="/server/"><i class="fa fa-server fa-2x"></i><div>Server</div></a>
+                    <a style="padding:30px" class="nav-link nav-item text-black-50 h text-center" href="/admin/"><i class="fa fa-cog fa-2x"></i><div>Setup</div></a>
+
+                </div>
+          </div>
+
+      <div class="col">
+          <div class="container-fluid" >
+            <div class="row">
+                <div class="col-6 container-fluid">
+                    <div class="row">
+<!--                        pue-->
+                        <div class="col-6">
+                            <div class="card" style="margin-top:10px">
+                                <nav class="navbar navbar-light bg-light" >
+                                    <div class="text-secondary panel-heading">PUE</div>
+                                </nav>
+                                <div class="card-body" >
+<!--                                   <div class="text-secondary panel-heading">PUE</div>-->
+                                    <h1>1.23</h1>
+                                    <span class="text-secondary">Total Power / IT Power (KW)</span>
+                                    <div class="text-secondary">2.65 / 2.15</div>
+                                    <div style="width:270px;height:90px" id="pue"></div>
+
+                                </div>
+                            </div>
+                        </div>
+<!--                        Server Node-->
+                        <div class="col-6">
+                            <div class="card" style="margin-top:10px">
+                                <nav class="navbar navbar-light bg-light" >
+                                    <div class="text-secondary panel-heading">Server Node</div>
+                                </nav>
+                                <div class="card-body" >
+                                    <table class="table  table-hover ">
+<!--                                        <tr >-->
+<!--                                            <th>Node</th>-->
+<!--                                            <th>Status</th>-->
+<!--                                        </tr>-->
+                                        {% for list in confList%}
+                                        <tr onclick="window.document.location = '/serverNode/?node={{ list.0 }}'">
+                                            <td >{{ list.1 }}</td>
+                                            <td ><i class="fa fa-circle text-success"></i></td>
+<!--                                            <td><a href="/serverNode/?node={{ list.0 }}" class="button">Info</a></td>-->
+                                        </tr>
+                                        {% endfor %}
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+<!--                        Tank-->
+                        <div class="col-12">
+                            <div class="card" style="margin-top:10px">
+                                <nav class="navbar navbar-light bg-light" >
+                                    <div class="text-secondary panel-heading">Server</div>
+                                </nav>
+                            <div class="card-body" >
+                                <div class="btn-group" role="group" aria-label="Basic example" style="maring:10px;padding:10px">
+                                    {% for node in confList %}
+                                  <button id="{{ node.1}}" onclick="nodeChoice(this.id)" type="button" class="btn btn-secondary">{{ node.1 }}</button>
+                                    {% endfor %}
+                                <div class="input-group-append" style="width:350px">
+                                    <input id="serverlines" type="number"  min="0" class="form-control" placeholder="Display Number (defualt 100)" >
+                                    <button class="btn btn-outline-info" type="button" onclick="serverChangeLines()">Submit</button>
+                                </div>
+                                </div>
+                                <div id="serverName" style="padding:10px">{{ confList.0.1 }}</div>
+                                <div id="serverData"  style="width: 600px;height:400px;padding:10px"></div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 card" style="margin-top:10px;padding:0px">
+                    <div class="card-bode" >
+                        <nav class="navbar navbar-light bg-light" >
+                            <div class="text-secondary panel-heading">Sensor</div>
+                        </nav>
+                        <div class="input-group " style="padding :10px ;padding-right:30px">
+                            <div class="input-group-append" style="width:350px">
+                                <input id="lines" type="number"  min="0" class="form-control" placeholder="Display Number (defualt 100)" >
+                                <button class="btn btn-outline-info" type="button" onclick="changeLines()">Submit</button>
+                            </div>
+                        </div>
+                        <div id="main"  style="width: 600px;height:400px;padding:10px"></div>
+
+                        <nav class="navbar navbar-light bg-light" >
+                            <div class="text-secondary panel-heading">CPU Temperature</div>
+                        </nav>
+                        <div id="cpuMaxTemp"  style="width: 600px;height:400px;padding:10px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      </div>
+        <!-- footer -->
+      <footer id="footer" style="position: relative;">
+        <div class="text-center padder clearfix">
+          <p>
+            <small>&copy; Inventec.co</small><br><br>
+          </p>
+        </div>
+      </footer>
+  </div>
+
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/echarts.min.js' %}"></script>
+    <script src="{% static 'js/LocalJs/sensor.js' %}"></script>
+    <script src="{% static 'js/LocalJs/server.js' %}"></script>
+    <script src="{% static 'js/LocalJs/localJs.js' %}"></script>
+    <script src="{% static 'js/LocalJs/cpu.js' %}"></script>
+
+</body>
+</html>

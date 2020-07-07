@@ -1,0 +1,287 @@
+
+<!DOCTYPE html >
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Inventec Liquid Cooling</title>
+
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugin.css' %}">
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+
+<!--  <link rel="stylesheet"  href="{% static 'css/bootstrap/css/bootstrap.css' %}">-->
+<!--  <script src="{% static 'js/jquery-3.4.1.js' %}"></script>-->
+<!--  <script href="{% static 'css/bootstrap/js/bootstrap.min.js' %}"></script>-->
+</head>
+<body>
+  <!-- header -->
+	<header id="header" class="navbar bg bg-black">
+    <a class="navbar-brand" href="#">Inventec</a>
+    <button type="button" class="btn btn-link pull-left nav-toggle hidden-lg" data-toggle="class:slide-nav slide-nav-left" data-target="body">
+      <i class="icon-reorder icon-xlarge text-default"></i>
+    </button>
+	</header>
+	<!-- 左侧边栏 -->
+  <nav id="nav" class="nav-primary visible-lg nav-vertical bg-light">
+    <ul class="nav" data-spy="affix" data-offset-top="50">
+      	<li class="active"><a href="/homepage/"><i class="fa fa-dashboard icon-xlarge"></i>Summary</a></li>
+      	<li><a href="/cdu/"><i class="fa fa-th icon-xlarge"></i>CDU</a></li>
+	  	<li><a href="/sensor/"><i class="fa fa-thermometer-half  icon-xlarge"></i>Sensor</a></li>
+      	<li><a href="/server/"><i class="fa fa-server icon-xlarge"></i>Server</a></li>
+		<li><a href="/admin/"><i class="fa fa-cog icon-xlarge"></i>Setup</a></li>
+    </ul>
+  </nav>
+  <!-- / nav -->
+  <section id="content">
+    <section class="main padder">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <!-- easypiechart -->
+            <div class="col-6">
+              <section class="panel">
+                <header class="panel-heading bg-white">
+                  <div class="text-center h5">PUE</div>
+                </header>
+                <div class="pull-in text-center">
+                  <div class="inline">
+						<h1>1.23</h1>
+						<div class="easypie-text text-muted">Total Power / IT Power (KW)</div>
+						<div class="easypie-text text-muted">2.65 / 2.15</div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-6">
+              <section class="panel">
+                <header class="panel-heading bg-white">
+                  <div class="text-center h5">IT Power / Total Power</div>
+                </header>
+                <div class="pull-in text-center">
+                  <div class="inline">
+                    <div class="easypiechart" data-percent="81" data-bar-color="#576879">
+                      <span class="h2" style="margin-left:10px;margin-top:10px;display:inline-block">81.1</span>%
+                      <div class="easypie-text text-muted">pue = 1.23</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!-- easypiechart end-->
+          </div>
+		<!-- task -->
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<section class="panel ">
+						<header class="panel-heading">
+						  <a class="btn btn-link pull-right nav"></a>
+						  Server Node
+						</header>
+						<ul class="panel-content list-group list-group-flush m-t-n">
+						  <li class="list-group-item" data-toggle="class:active" data-target="#todo-1">
+							<div class="media">
+							  <div id="todo-1" class="pull-right text-primary m-t-small">
+								<i class="icon-circle icon-large text text-default"></i>
+								<i class="icon-circle icon-large text-active text-primary"></i>
+							  </div>
+							  <div class="media-body">
+								<div><a href="#" class="h5">Node 1</a></div>
+								<small class="text-muted">Running</small>
+							  </div>
+							</div>
+						  </li>
+						  <li class="list-group-item" data-toggle="class:active" data-target="#todo-2">
+								<div class="media">
+								  <div id="todo-2" class="pull-right text-primary m-t-small">
+									<i class="icon-circle icon-large text text-default"></i>
+									<i class="icon-circle icon-large text-active text-primary"></i>
+								  </div>
+								  <div class="media-body">
+									<div><a href="#" class="h5">Node 2</a></div>
+									<small class="text-muted">Stand by</small>
+								  </div>
+								</div>
+						  </li>
+						  <li class="list-group-item" data-toggle="class:active" data-target="#todo-3">
+								<div class="media">
+								  <div id="todo-3" class="pull-right text-primary m-t-small">
+									<i class="icon-circle icon-large text text-default"></i>
+									<i class="icon-circle icon-large text-active text-primary"></i>
+								  </div>
+								  <div class="media-body">
+									<div><a href="#" class="h5">Node 3</a></div>
+									<small class="text-muted">Running</small>
+								  </div>
+								</div>
+						  </li>
+						</ul>
+					</section>
+
+				</div>
+				<!-- TANK -->
+				<div class="col-6">
+					<section class="panel ">
+						<header class="panel-heading">
+						  <a class="btn btn-link pull-right nav"></a>
+						  TANK
+						</header>
+						<ul class="panel-content list-group list-group-flush m-t-n">
+						  <li class="list-group-item" data-toggle="class:active" data-target="#todo-1">
+							<div class="media container">
+							  <div class="media-body row">
+								<div class="col-4"><a class="h5">液位</a></div>
+								<div class="col-4"><a class="h5">85%</a></div>
+								<div class=" col-4 icon-circle icon-large text text-primary"></div>
+							  </div>
+							</div>
+						  </li>
+						  <li class="list-group-item" data-toggle="class:active" data-target="#todo-1">
+							<div class="media container">
+							  <div class="media-body row">
+								<div class="col-4"><a href="#" class="h5">温度</a></div>
+								<div class="col-4"><a href="#" class="h5">70℃</a></div>
+								<div class=" col-4 icon-circle icon-large text text-danger"></div>
+							  </div>
+							</div>
+						  </li>
+						  <li class="list-group-item" data-toggle="class:active" data-target="#todo-1">
+							<div class="media container">
+							  <div class="media-body row">
+								<div class="col-4"><a href="#" class="h5">状态</a></div>
+								<div class="col-4"><a href="#" class="h5">警告</a></div>
+								<div class=" col-4 icon-circle icon-large text text-warning"></div>
+							  </div>
+							</div>
+						  </li>
+						</ul>
+					</section>
+					<section class="panel ">
+						<header class="panel-heading">
+						  <a class="btn btn-link pull-right nav"></a>
+							CDU
+						</header>
+						<ul class="panel-content list-group list-group-flush m-t-n">
+						  <li class="list-group-item" data-toggle="class:active" data-target="#todo-1" onclick="event.stopPropagation()">
+							<div class="media">
+							  <div class="media-body">
+								<a href="/cdu/" class="btn btn-info">Info</a>
+								<span class="h5">&ensp; Status:</span>
+								  <div id="todo-4" class="pull-right text-primary m-t-small">
+									<i class="icon-circle icon-large text text-primary"></i>
+									<!-- <i class="icon-circle icon-large text-active text-primary"></i> -->
+									<i class="icon-circle icon-large text-active text-danger"></i>
+								  </div>
+							  </div>
+							</div>
+						  </li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+
+				  <!-- / task-->
+        </div>
+        <div class="col-lg-6 container">
+          	<section class="panel row">
+				<header class="panel-heading">
+				  <ul class="nav nav-pills pull-right">
+				    <li><a href="#" data-loading-text="loading...">step  1s</a></li>
+				  </ul>
+				  <span>Summary</span>
+				</header>
+          	  <ul class="list-group list-group-flush m-t-n">
+          	    <li class="list-group-item">
+					  <table class=" table  panel col-6">
+						<tr>
+							<td>供液温度</br>25℃</td>
+							<td>
+								<div class="sparkline" data-type="line" data-resize="true" data-height="40" data-width="100%" data-line-color="#bfea5f"  data-highlight-line-color="#e1e5e9" data-spot-radius="5"
+								 data-composite-data="[50,51,52,53,52,52,52,52,51,53,54,53]">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>回液温度<br />30℃</td>
+							<td>
+								<div class="sparkline" data-type="line" data-resize="true" data-height="40" data-width="100%" data-line-color="#bfea5f"  data-highlight-line-color="#e1e5e9" data-spot-radius="5"
+								 data-composite-data="[50,51,52,53,52,52,52,52,51,53,54,53]">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>流量<br />5L/Min </td>
+							<td>
+								<div class="sparkline" data-type="line" data-resize="true" data-height="40" data-width="100%" data-line-color="#bfea5f"  data-highlight-line-color="#e1e5e9" data-spot-radius="5"
+								 data-composite-data="[50,51,52,53,52,52,52,52,51,53,54,53]">
+								</div>
+								<ul class="list-inline text-muted axis"><li>|</li><li>|</li><li>|</li><li>|</li><li>|</li><li>|</li><li>|</li><li>|</li><li>|</li><li>|</li><li>|</li><li>|</li></ul>
+
+							</td>
+						</tr>
+						<tr>
+							<td>CPU温度</td>
+							<td>
+								<section class="panel">
+								  <header class="panel-heading">各节点CPU最高温度</header>
+								  <div class="text-center">
+								    <div class="inline">
+								      <div class="sparkline inline"
+										data-type="bar" data-height="145" data-bar-width="20" data-bar-spacing="10" data-bar-color="#a3e2fe"
+										data-spot-radius="3">40,15,12,18,20,17,13</div>
+								      <ul class="list-inline text-muted axis">
+										<li>1<br>40℃</li>
+										<li>2<br>40℃</li>
+										<li>3<br>40℃</li>
+										<li>4<br>40℃</li>
+										<li>5<br>40℃</li>
+										<li>6<br>40℃</li>
+									  </ul>
+								</section>
+							</td>
+						</tr>
+						</table>
+          	    </li>
+
+          	  </ul>
+				</li>
+			  </ul>
+			</section>
+		</div>
+	   </div>
+	</section>
+  </section>
+
+  <!-- footer -->
+  <footer id="footer" style="position: relative;">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>&copy; Inventec.co</small><br><br>
+      </p>
+    </div>
+  </footer>
+  <a href="#" class="hide slide-nav-block" data-toggle="class:slide-nav slide-nav-left" data-target="body"></a>
+  <!-- / footer -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <!-- Bootstrap -->
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- app -->
+  <script src="{% static 'js/app.js' %}"></script>
+  <script src="{% static 'js/app.plugin.js' %}"></script>
+  <script src="{% static 'js/app.data.js' %}"></script>
+
+  <!-- Sparkline Chart -->
+  <script src="{% static 'js/charts/sparkline/jquery.sparkline.min.js' %}"></script>
+  <!-- Easy Pie Chart -->
+  <script src="{% static 'js/charts/easypiechart/jquery.easy-pie-chart.js' %}"></script>
+<!--  <script src="{% static 'js/ie/ex<strong>canvas</strong>.js' %}"></script>-->
+  <script src="{% static 'js/style.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html >
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Inventec Liquid Cooling</title>
+  <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/plugin.css' %}">
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+
+</head>
+<body>
+  <!-- header -->
+	<header id="header" class="navbar bg bg-black">
+    <a class="navbar-brand" href="#">Inventec</a>
+    <button type="button" class="btn btn-link pull-left nav-toggle hidden-lg" data-toggle="class:slide-nav slide-nav-left" data-target="body">
+      <i class="icon-reorder icon-xlarge text-default"></i>
+    </button>
+	</header>
+	<!-- 左侧边栏 -->
+  <nav id="nav" class="nav-primary visible-lg nav-vertical bg-light">
+    <ul class="nav" data-spy="affix" data-offset-top="50">
+      	<li ><a href="/homepage/"><i class="fa fa-dashboard icon-xlarge"></i>Summary</a></li>
+      	<li><a href="/cdu/"><i class="fa fa-th icon-xlarge"></i>CDU</a></li>
+	  	<li class="active"><a href="/sensor/"><i class="fa fa-thermometer-half  icon-xlarge"></i>Sensor</a></li>
+      	<li><a href="/server/"><i class="fa fa-server icon-xlarge"></i>Server</a></li>
+		<li><a href="/admin/"><i class="fa fa-cog icon-xlarge"></i>Setup</a></li>
+    </ul>
+  </nav>
+  <!-- / nav -->
+	<div class="container" >
+		<div class="row" >
+			<div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Model 1</h5>
+                    </div>
+                </div>
+			</div>
+			<div id="main" class="col-6" style="width: 600px;height:400px;"></div>
+		</div>
+	</div>
+  <!-- footer -->
+  <footer id="footer" style="position: relative;">
+    <div class="text-center padder clearfix">
+      <p>
+        <small>&copy; Inventec.co</small><br><br>
+      </p>
+    </div>
+
+  </footer>
+  <a href="#" class="hide slide-nav-block" data-toggle="class:slide-nav slide-nav-left" data-target="body"></a>
+  <!-- footer -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <!-- Bootstrap -->
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/echarts.min.js' %}"></script>
+  <!-- app -->
+
+
+<!--  <script src="{% static 'js/ie/ex<strong>canvas</strong>.js' %}"></script>-->
+<!--  <script src="{% static 'js/style.js' %}"></script>-->
+<!--<script src="{% static 'js/LocalJs/sensor.js' %}"></script>-->
+<script src="{% static 'js/LocalJs/sensorTest.js' %}"></script>
+</body>
+</html>
