@@ -10,8 +10,8 @@ FAN7_RPM|0RPM|cr
 FAN8_RPM|0RPM|cr
 Inlet_Temp|noreading|ns
 Outlet_Temp|14degreesC|ok
-CPU0_Temp|72degreesC|ok
-CPU0_Margin_Temp|28degreesC|ok
+CPU0_Temp|73degreesC|ok
+CPU0_Margin_Temp|27degreesC|ok
 CPU1_Temp|69degreesC|ok
 CPU1_Margin_Temp|31degreesC|ok
 CPU0_Status|0x80|ok

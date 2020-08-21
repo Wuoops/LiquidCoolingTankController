@@ -12,8 +12,8 @@ Inlet_Temp|noreading|ns
 Outlet_Temp|14degreesC|ok
 CPU0_Temp|72degreesC|ok
 CPU0_Margin_Temp|28degreesC|ok
-CPU1_Temp|69degreesC|ok
-CPU1_Margin_Temp|31degreesC|ok
+CPU1_Temp|70degreesC|ok
+CPU1_Margin_Temp|30degreesC|ok
 CPU0_Status|0x80|ok
 CPU1_Status|0x80|ok
 CPU0_PROC_Hot|0x00|ok

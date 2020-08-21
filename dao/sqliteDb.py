@@ -1,6 +1,8 @@
 import sqlite3
+import os
 
-sql3Path = '/root/Desktop/LCPDataSide/LcpWebSide/db.sqlite3'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sql3Path = BASE_DIR+'/db.sqlite3'
 class sqlDao():
     def __init__(self):
         self.connectDB()

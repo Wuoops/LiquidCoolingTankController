@@ -48,10 +48,12 @@ class  MongoDao():
     def closeMongoConn(self):
         pass
 #
-
-# nodeName = 'Node2'
-# resDic = {'Inlet_Temp': 'no', 'CPU0_Temp': '14', 'CPU1_Temp': '15', 'CPU0_Margin_Temp': '77', 'CPU1_Margin_Temp': '76', 'PS1_Power': '40', 'PS2_Power': '40', 'PCH_Temp': '18', 'DIMMG0_Temp': '16'}
 #
+# nodeName = 'Node1'
+# # resDic = {'Inlet_Temp': 'no', 'CPU0_Temp': '14', 'CPU1_Temp': '15', 'CPU0_Margin_Temp': '77', 'CPU1_Margin_Temp': '76', 'PS1_Power': '40', 'PS2_Power': '40', 'PCH_Temp': '18', 'DIMMG0_Temp': '16'}
+# #
 # mdb = MongoDao()
-# a = mdb.iniertOneData(nodeName,resDic)
+# mdb.iniertOneData(nodeName,{'s':'a'})
+# a = mdb.selectAll(nodeName)
+# # a = mdb.iniertOneData(nodeName,resDic)
 # print(a)

@@ -126,6 +126,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
 )
+
 SIMPLEUI_HOME_INFO = False
 SIMPLEUI_LOGO='/static/img/logo.png'
 SIMPLEUI_STATIC_OFFLINE=True

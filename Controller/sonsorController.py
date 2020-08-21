@@ -22,6 +22,7 @@ def writeToDB(arg):
     #以设备名称作为表名称持续插入
     for i in range(RuntimeLong):
         dataDic = mf.readData(master=ma,startNum=32,length=24)
+        # print(devName)
         mdb.iniertOneData(str(devName),dataDic)
         time.sleep(sleepTime)
         # print(devName)
